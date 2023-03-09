@@ -1,7 +1,16 @@
 import smtplib
-s = smtplib.SMTP('smtp@gmail.com', 587)
+
+# creates SMTP session
+s = smtplib.SMTP('smtp.gmail.com', 587)
+
+# start TLS for security
 s.starttls()
-s.login("hemanthkumar.edcs@gmail.com", "wjiulhegwdlbagdk")
-message = "hi"
-s.sendmail("hemanthkumar.edcs@gmail.com", "bindushreesn8@gmail.com", message)
-s.quit()
+
+# Authentication
+s.login("dbcpolarbear@gmail.com", "sdguyoyuvnnqdyhw")
+
+# message to be sent
+message = "Hello Bindhushree, how you are doing??, Have a good Day"
+
+# sending the mail
+s.sendmail("dbcpolarbear@gmail.com", "sevaopsb@gmail.com", message)
